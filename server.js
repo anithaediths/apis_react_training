@@ -2,6 +2,7 @@ const helmet = require('helmet');
 var express = require('express');
 const planjs = require('./plans/plans.js')
 const shopjs = require('./shopping/shop.js')
+const formjs = require('./form/form.js')
 
 var app = express();
 var PORT = 3000;
@@ -26,3 +27,4 @@ app.listen(process.env.PORT || 3000, function (err) {
 
 app.get("/getPlan", planjs);
 app.get("/getShoppingItems", shopjs);
+app.get("/getFormDetails", formjs);
